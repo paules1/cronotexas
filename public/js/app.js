@@ -6,11 +6,12 @@
 
     document.querySelector('#btn_stop').addEventListener('click', function () {
         myCron.stop()
-        console.log(myCron);
+       document.querySelector(myCron.rcronContainer).classList.add('stop');
     });
 
     document.querySelector('#btn_run').addEventListener('click', function () {
         myCron.start()
+        document.querySelector(myCron.rcronContainer).classList.remove('stop');
     });
 
     document.querySelector('#btn_ff').addEventListener('click', function () {
@@ -151,8 +152,8 @@
         document.querySelector(this.cronContainer).innerHTML = this.timeToText(this.cron);
         //paint stage
         document.querySelector(this.stageContainer).innerHTML = this.currentStageName;
-        document.querySelector(this.shortContainer).innerHTML = this.currentShortAmount;
-        document.querySelector(this.dShortContainer).innerHTML = String(this.currentShortAmount * 2);
+        document.querySelector(this.shortContainer).innerHTML = this.currentShortAmount.toLocaleString();
+        document.querySelector(this.dShortContainer).innerHTML = (this.currentShortAmount * 2).toLocaleString();
         document.querySelector(this.rcronContainer).innerHTML = this.secondsToText(this.currentTimeLeft);
         //cronometer if active
         if (this.active) {
