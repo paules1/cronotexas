@@ -17,6 +17,16 @@ body{
 img {
     -ms-interpolation-mode: bicubic;
 }
+@media (min-height: 420px){
+    .container{
+        flex-direction: column;
+        justify-items: center;
+    }
+}
+.container {
+    display: flex;
+    justify-items: center;
+}
 .bottom-container {
     position: absolute;
     bottom: 0;
@@ -60,9 +70,9 @@ img {
 .phase-container .d-short-badge {
     background-image: url('/assets/img/chip_white.svg');
     background-repeat: no-repeat;
-    background-size: 180px 180px;
-    width: 180px;
-    height: 180px;
+    background-size: 140px 140px;
+    width: 140px;
+    height: 140px;
     color: #000;
     display: flex;
     justify-content: center;
