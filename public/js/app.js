@@ -1,5 +1,5 @@
 (() => {
-    const myCron = new Cronometer();
+    const myCron = new Chronometer();
     setInterval(() => {
         myCron.tick()
     }, 1000);
@@ -30,7 +30,7 @@
     });
 
 
-    function Cronometer() {
+    function Chronometer() {
         this.active = false;
         this.clockContainer = "";
         this.cronContainer = "";
@@ -73,7 +73,7 @@
 
     }
 
-    Cronometer.prototype.stop = function () {
+    Chronometer.prototype.stop = function () {
         if (this.active) {
             this.active = false;
             this.offsetTime.setHours(this.cron.getHours());
@@ -82,26 +82,26 @@
         }
     }
 
-    Cronometer.prototype.start = function () {
+    Chronometer.prototype.start = function () {
         if (this.active === false) {
             this.rectime = new Date();
             this.active = true;
         }
     }
 
-    Cronometer.prototype.ff = function () {
+    Chronometer.prototype.ff = function () {
         if (this.active) {
             this.offsetTime.setMinutes(this.offsetTime.getMinutes() + 1);
         }
     }
 
-    Cronometer.prototype.rw = function () {
+    Chronometer.prototype.rw = function () {
         if (this.active) {
             this.offsetTime.setMinutes(this.offsetTime.getMinutes() - 1);
         }
     }
 
-    Cronometer.prototype.jumpforward = function (stage) {
+    Chronometer.prototype.jumpforward = function (stage) {
         if (this.currentStage < this.maxStages) {
             this.stop();
             this.offsetTime.setHours(0, 0, 0, 0);
@@ -111,7 +111,7 @@
         }
     }
 
-    Cronometer.prototype.jumpback = function (stage) {
+    Chronometer.prototype.jumpback = function (stage) {
         if (this.currentStage > 0) {
             this.stop();
             this.offsetTime.setHours(0, 0, 0, 0);
@@ -125,7 +125,7 @@
         }
     }
 
-    Cronometer.prototype.timeToText = function (tim) {
+    Chronometer.prototype.timeToText = function (tim) {
         let th = tim.getHours();
         let tm = tim.getMinutes();
         let ts = tim.getSeconds();
@@ -135,7 +135,7 @@
         return th + ":" + tm + ":" + ts;
     }
 
-    Cronometer.prototype.secondsToText = function (sec) {
+    Chronometer.prototype.secondsToText = function (sec) {
         let mm = Math.floor(sec / 60);
         let ss = sec % 60;
         if (mm < 10) mm = "0" + mm;
@@ -143,9 +143,7 @@
         return mm + ":" + ss;
     }
 
-    Cronometer.prototype.tick = function () {
-        console.log('ticking..')
-        let obj = this;
+    Chronometer.prototype.tick = function () {
         this.time = new Date();
         //paint time
         document.querySelector(this.clockContainer).innerHTML = this.timeToText(this.time);

@@ -1,6 +1,7 @@
 body{
     background-color:#000000;
     color:#ffffff;
+    font-family: Tahoma;
 }
 .clock{
     font-family:'Ewert',cursive;
@@ -15,4 +16,54 @@ body{
 }
 img {
     -ms-interpolation-mode: bicubic;
+}
+.bottom-container {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding-bottom: 20px;
+}
+.bottom-container .btn-container {
+    padding: 5px;
+}
+.phase-container {
+    height: 200px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.phase-container .phase-badge {
+    background-image: url('/assets/img/chip_white.svg');
+    background-repeat: no-repeat;
+    background-size: 200px 200px;
+    width: 200px;
+    color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.phase-container .short-badge {
+    background-image: url('/assets/img/chip_white.svg');
+    background-repeat: no-repeat;
+    background-size: 140px 140px;
+    width: 140px;
+    height: 140px;
+    color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.phase-container .d-short-badge {
+    background-image: url('/assets/img/chip_white.svg');
+    background-repeat: no-repeat;
+    background-size: 180px 180px;
+    width: 180px;
+    height: 180px;
+    color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
