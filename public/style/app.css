@@ -30,7 +30,7 @@ img {
     padding: 5px;
 }
 .phase-container {
-    height: 200px;
+    min-height: 140px;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -38,8 +38,9 @@ img {
 .phase-container .phase-badge {
     background-image: url('/assets/img/chip_white.svg');
     background-repeat: no-repeat;
-    background-size: 200px 200px;
-    width: 200px;
+    background-size: 140px 140px;
+    width: 140px;
+    height: 140px;
     color: #000;
     display: flex;
     justify-content: center;

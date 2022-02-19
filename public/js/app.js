@@ -47,21 +47,21 @@
         this.currentShortAmount = 0;
         this.currentTimeLeft = 0;
         this.stages = [];
-        this.stages[0] = {number: 1, from: 0, to: 12, name: "Fase 1", short: 25}
-        this.stages[1] = {number: 2, from: 12, to: 24, name: "Fase 2", short: 50}
-        this.stages[2] = {number: 3, from: 24, to: 36, name: "Fase 3", short: 75}
-        this.stages[3] = {number: 4, from: 36, to: 48, name: "Fase 4", short: 100}
-        this.stages[4] = {number: 5, from: 48, to: 60, name: "Fase 5", short: 150}
-        this.stages[5] = {number: 6, from: 60, to: 72, name: "Fase 6", short: 200}
-        this.stages[6] = {number: 7, from: 72, to: 84, name: "Fase 7", short: 300}
-        this.stages[7] = {number: 8, from: 84, to: 96, name: "Fase 8", short: 400}
-        this.stages[8] = {number: 9, from: 96, to: 108, name: "Fase 9", short: 500}
-        this.stages[9] = {number: 10, from: 108, to: 120, name: "Fase 10", short: 600}
-        this.stages[10] = {number: 11, from: 120, to: 132, name: "Fase 11", short: 800}
-        this.stages[11] = {number: 12, from: 132, to: 144, name: "Fase 12", short: 1000}
-        this.stages[12] = {number: 13, from: 144, to: 156, name: "Fase 13", short: 1500}
-        this.stages[13] = {number: 14, from: 156, to: 168, name: "Fase 14", short: 2000}
-        this.stages[14] = {number: 15, from: 168, to: 180, name: "Fase 15", short: 2500}
+        this.stages[0] = {number: 1, from: 0, to: 12, name: "1", short: 25}
+        this.stages[1] = {number: 2, from: 12, to: 24, name: "2", short: 50}
+        this.stages[2] = {number: 3, from: 24, to: 36, name: "3", short: 75}
+        this.stages[3] = {number: 4, from: 36, to: 48, name: "4", short: 100}
+        this.stages[4] = {number: 5, from: 48, to: 60, name: "5", short: 150}
+        this.stages[5] = {number: 6, from: 60, to: 72, name: "6", short: 200}
+        this.stages[6] = {number: 7, from: 72, to: 84, name: "7", short: 300}
+        this.stages[7] = {number: 8, from: 84, to: 96, name: "8", short: 400}
+        this.stages[8] = {number: 9, from: 96, to: 108, name: "9", short: 500}
+        this.stages[9] = {number: 10, from: 108, to: 120, name: "10", short: 600}
+        this.stages[10] = {number: 11, from: 120, to: 132, name: "11", short: 800}
+        this.stages[11] = {number: 12, from: 132, to: 144, name: "12", short: 1000}
+        this.stages[12] = {number: 13, from: 144, to: 156, name: "13", short: 1500}
+        this.stages[13] = {number: 14, from: 156, to: 168, name: "14", short: 2000}
+        this.stages[14] = {number: 15, from: 168, to: 180, name: "15", short: 2500}
         this.maxStages = 15;
         this.clockContainer = "#time";
         this.cronContainer = "#cron";
@@ -180,7 +180,7 @@
                 this.active = false;
                 this.offsetTime.setHours(0, 0, 0, 0);
                 this.currentStage = 1;
-                this.currentStageName = 'Fase 1';
+                this.currentStageName = '1';
                 this.currentShortAmount = 0;
             }
         }
