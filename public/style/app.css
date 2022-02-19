@@ -17,7 +17,7 @@ body{
 img {
     -ms-interpolation-mode: bicubic;
 }
-@media (min-height: 414px){
+@media (min-height: 420px){
     .container{
         flex-direction: column;
     }
