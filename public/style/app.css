@@ -1,0 +1,18 @@
+body{
+    background-color:#000000;
+    color:#ffffff;
+}
+.clock{
+    font-family:'Ewert',cursive;
+    padding:3px 3px 3px 3px;
+    color:#36AD2D;
+    text-align:center;
+}
+.time{
+    color:#ffffff;
+    font-size:large;
+    font-weight:bold;
+}
+img {
+    -ms-interpolation-mode: bicubic;
+}
