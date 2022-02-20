@@ -26,10 +26,12 @@ import "../style/app.css"
 
     document.querySelector('#btn_jumpforward').addEventListener('click', function () {
         myCron.jumpforward()
+        document.querySelector(myCron.rcronContainer).classList.remove('stop');
     });
 
     document.querySelector('#btn_jumpback').addEventListener('click', function () {
         myCron.jumpback()
+        document.querySelector(myCron.rcronContainer).classList.remove('stop');
     });
 
 
