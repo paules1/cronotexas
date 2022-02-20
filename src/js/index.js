@@ -1,17 +1,19 @@
+import "../style/app.css"
 (() => {
     const myCron = new Chronometer();
     setInterval(() => {
         myCron.tick()
     }, 1000);
 
-    document.querySelector('#btn_stop').addEventListener('click', function () {
-        myCron.stop()
-       document.querySelector(myCron.rcronContainer).classList.add('stop');
-    });
 
     document.querySelector('#btn_run').addEventListener('click', function () {
-        myCron.start()
-        document.querySelector(myCron.rcronContainer).classList.remove('stop');
+        if (!myCron.active) {
+            myCron.start()
+            document.querySelector(myCron.rcronContainer).classList.remove('stop');
+        } else {
+            myCron.stop()
+            document.querySelector(myCron.rcronContainer).classList.add('stop');
+        }
     });
 
     document.querySelector('#btn_ff').addEventListener('click', function () {
